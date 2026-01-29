@@ -2,4 +2,5 @@ streamlit
 opencv-python-headless
 numpy
 face_recognition_models
-gunicorn app:app
+gunicorn
+
