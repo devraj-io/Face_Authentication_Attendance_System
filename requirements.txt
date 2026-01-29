@@ -1,7 +1,4 @@
-flask
-gunicorn
+streamlit
 opencv-python-headless
-cmake
-dlib
-face_recognition
 numpy
+face_recognition_models
