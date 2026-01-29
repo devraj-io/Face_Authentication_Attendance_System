@@ -1,5 +1,5 @@
 streamlit
 opencv-python-headless
 numpy
-https://github.com/ghandic/dlib-python-wheels/raw/main/dlib-19.24.1-cp311-cp311-linux_x86_64.whl
+dlib
 face-recognition
