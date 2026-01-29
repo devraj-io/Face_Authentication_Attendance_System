@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Attendance Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f4; }
+        .container { display: flex; justify-content: center; margin-top: 50px; gap: 20px; }
+        .video-box { border: 5px solid #333; border-radius: 10px; overflow: hidden; background: #000; }
+        .controls { display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+        button { padding: 15px 30px; font-size: 18px; cursor: pointer; border: none; border-radius: 5px; color: white; transition: 0.3s; }
+        .btn-in { background-color: #28a745; }
+        .btn-out { background-color: #dc3545; }
+        button:hover { opacity: 0.8; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <h1>Face Recognition Attendance</h1>
+    <div class="container">
+        <div class="video-box">
+            <img src="{{ url_for('video_feed') }}" width="640">
+        </div>
+        <div class="controls">
+            <form action="/punch" method="post">
+                <input type="hidden" name="action" value="Punch-in">
+                <button type="submit" class="btn-in">Punch In</button>
+            </form>
+            <form action="/punch" method="post">
+                <input type="hidden" name="action" value="Punch-out">
+                <button type="submit" class="btn-out">Punch Out</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
